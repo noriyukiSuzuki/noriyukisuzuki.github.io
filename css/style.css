@@ -21,7 +21,7 @@ body {
 .nav-container {
   max-width: 1400px; /* navbar width */
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 45px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ body {
 nav a {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 24px;
   text-decoration: none;
   color: #333;
   margin-left: 30px;
@@ -63,12 +63,8 @@ nav a:hover::after {
 }
 
 .logo-img {
-  height: 32px;
+  height: 34px;
   width: auto;
-}
-
-.logo:hover .logo-img {
-  opacity: 0.7; /* lighter on hover */
 }
 
 /* Special layout for home page with free-positioned images */
@@ -88,24 +84,23 @@ body.home .content {
 
 /* Apple image size + position */
 .apple {
-  width: 600px;
-  top: 300px;
-  left: 67%;
+  width: 750px;
+  top: 200px;
+  left: 32.5%;
   transform: translateX(-50%);
 }
 
 /* Broom image size + position */
 .broom {
-  width: 700px;
+  width: 1060px;
   top: 1100px;
-  left: 15%;
+  left: 30%;
 }
 
 footer {
   background-color: #fffcee;
-  /* border-top: 1px solid #ddd; */
-  padding: 8px 0;
-  font-size: 12px;
+  padding: 0 0;
+  font-size: 14px;
   font-family: "Inter", sans-serif;
   color: #aaa;
 }
