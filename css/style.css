@@ -1,43 +1,54 @@
-/* General styling */
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #f8f5e9; /* your Figma background color */
+  background-color: #fffcee;
   color: #333;
 }
 
-/* Navbar */
+/* Navbar full width */
 #navbar {
-  position: sticky;
+  position: fixed; /* must be fixed for JS transform to work correctly */
   top: 0;
-  background: #f8f5e9;
-  border-bottom: 1px solid #ddd;
+  left: 0;
+  width: 100%;
+  background: #fffcee;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
+  /* border-bottom: 1px solid #ddd; */
 }
 
+/* Navbar container wider than main content */
 .nav-container {
+  max-width: 1400px; /* navbar width */
+  margin: 0 auto;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* consistent content width */
-  margin: 0 auto;
-  padding: 10px 20px;
 }
 
+/* Navigation links */
 nav a {
-  margin-left: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
   text-decoration: none;
   color: #333;
+  margin-left: 20px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main content narrower */
 .content {
-  max-width: 1200px; /* consistent width */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 100px 20px 20px; /* top padding so content isn't hidden behind fixed navbar */
+}
+
+.logo-img {
+  height: 32px; /* or whatever fits your design */
+  width: auto;  /* keeps proportions */
 }
