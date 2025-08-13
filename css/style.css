@@ -1,0 +1,43 @@
+/* General styling */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f8f5e9; /* your Figma background color */
+  color: #333;
+}
+
+/* Navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  background: #f8f5e9;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* consistent content width */
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.content {
+  max-width: 1200px; /* consistent width */
+  margin: 0 auto;
+  padding: 20px;
+}
