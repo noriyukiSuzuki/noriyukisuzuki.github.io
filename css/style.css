@@ -1,14 +1,14 @@
+/* Base */
 body {
   margin: 0;
   font-family: sans-serif;
   background-color: #fffcee;
   color: #333;
-  position: relative;
 }
 
-/* Navbar full width */
+/* Navbar */
 #navbar {
-  position: fixed; /* must be fixed for JS transform to work correctly */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,9 +17,8 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Navbar container wider than main content */
 .nav-container {
-  max-width: 1400px; /* navbar width */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 45px 20px;
   display: flex;
@@ -27,74 +26,78 @@ body {
   align-items: center;
 }
 
-/* Navigation links with underline animation */
-nav a {
+.logo-img {
+  height: 34px;
+  width: auto;
+}
+
+/* Nav links */
+.main-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 24px;
   text-decoration: none;
   color: #333;
-  margin-left: 30px;
   position: relative;
 }
 
-nav a::after {
+.main-nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; /* space between text and underline */
+  bottom: -4px;
   width: 100%;
-  height: 2px; /* underline thickness */
+  height: 2px;
   background-color: #333;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-nav a:hover::after {
+.main-nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* Main content narrower than navbar */
+/* Main content */
 .content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 20px 20px; /* top padding so content isn't hidden behind fixed navbar */
-}
-
-.logo-img {
-  height: 34px;
-  width: auto;
-}
-
-/* Special layout for home page with free-positioned images */
-body.home .content {
-  max-width: none;
-  padding: 100px 0 240px; /* bottom padding so footer clears images */
   position: relative;
-  min-height: 1500px; /* raise/lower based on your image positions */
+  padding: 120px 20px 240px;
+  min-height: 2700px;
 }
 
-/* Generic free-position image */
 .free-image {
   position: absolute;
-  max-width: 100%; /* prevent overflow on small screens */
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Apple image size + position */
-.apple {
-  width: 750px;
-  top: 200px;
-  left: 32.5%;
-  transform: translateX(-50%);
-}
-
-/* Broom image size + position */
+/* Broom image (now aligned LEFT) */
 .broom {
-  width: 1060px;
+  width: 1150px;
+  top: 200px;
+  left: 20px;
+}
+
+/* Apple image (now aligned RIGHT) */
+.apple {
+  width: 780px;
   top: 1100px;
-  left: 30%;
+  right: 20px;
+}
+
+/* Glass image (aligned LEFT like broom) */
+.glass {
+  width: 600px;   /* adjust size as you prefer */
+  top: 1900px;    /* adjust vertical position */
+  left: 10px;     /* same alignment logic as broom */
 }
 
 footer {
@@ -107,6 +110,12 @@ footer {
 
 footer .nav-container {
   display: flex;
-  justify-content: flex-end; /* push to right */
+  justify-content: flex-end;
   align-items: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .broom { top: 160px; }
+  .apple { top: 900px; }
 }
