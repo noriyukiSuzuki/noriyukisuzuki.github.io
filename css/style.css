@@ -34,7 +34,8 @@ body {
 /* Nav links */
 .main-nav {
   display: flex;
-  gap: 30px;
+  gap: 30px; /* gap between Works and About */
+  padding-bottom: 5px;
 }
 
 .main-nav a {
@@ -69,7 +70,7 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 120px 20px 240px;
-  min-height: 2700px;
+  min-height: 3500px;
 }
 
 .free-image {
@@ -79,26 +80,34 @@ body {
   height: auto;
 }
 
-/* Broom image (now aligned LEFT) */
+/* Broom image (aligned LEFT) */
 .broom {
   width: 1150px;
   top: 200px;
   left: 20px;
 }
 
-/* Apple image (now aligned RIGHT) */
+/* Apple image (aligned RIGHT) */
 .apple {
   width: 780px;
   top: 1100px;
   right: 20px;
 }
 
-/* Glass image (aligned LEFT like broom) */
+/* Glass image (aligned LEFT) */
 .glass {
   width: 600px;   /* adjust size as you prefer */
   top: 1900px;    /* adjust vertical position */
   left: 10px;     /* same alignment logic as broom */
 }
+
+/* Apple image (now aligned RIGHT) */
+.ohMy {
+  width: 980px;
+  top: 3000px;
+  right: 20px;
+}
+
 
 footer {
   background-color: #fffcee;
@@ -114,8 +123,9 @@ footer .nav-container {
   align-items: center;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .broom { top: 160px; }
-  .apple { top: 900px; }
+/* About page */
+.about-content {
+  width: 500px;
+  color: #333;
+  
 }
