@@ -124,8 +124,21 @@ footer .nav-container {
 }
 
 /* About page */
+.about-lapper {
+  width: 80%;
+  margin: 0 auto;  
+  padding-top: 40px; 
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #444;
+  text-align: justify;
+  line-height: 1.4;  /* adjust spaces btw text lines */
+
+}
+
 .about-content {
-  width: 500px;
-  color: #333;
-  
+  width: 50%;
+
+ 
+
 }
