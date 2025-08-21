@@ -96,9 +96,9 @@ body {
 
 /* Glass image (aligned LEFT) */
 .glass {
-  width: 600px;   /* adjust size as you prefer */
-  top: 1900px;    /* adjust vertical position */
-  left: 10px;     /* same alignment logic as broom */
+  width: 600px; /* adjust size as you prefer */
+  top: 1900px; /* adjust vertical position */
+  left: 20px; /* same alignment logic as broom */
 }
 
 /* Apple image (now aligned RIGHT) */
@@ -107,7 +107,6 @@ body {
   top: 3000px;
   right: 20px;
 }
-
 
 footer {
   background-color: #fffcee;
@@ -126,19 +125,57 @@ footer .nav-container {
 /* About page */
 .about-lapper {
   width: 80%;
-  margin: 0 auto;  
-  padding-top: 40px; 
+  margin: 0 auto;
+  padding-top: 40px;
   font-family: "Inter", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   color: #444;
   text-align: justify;
-  line-height: 1.4;  /* adjust spaces btw text lines */
+  line-height: 1.4; /* adjust spaces btw text lines */
+}
 
+.about-name {
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .about-content {
   width: 50%;
+}
 
- 
+.about-links {
+  padding-top: 10px;
+  line-height: 1;
+    font-size: 14px;
 
+}
+
+.about-links a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.about-links a:hover {
+  color: rgb(255, 180, 240);
+}
+
+.about-content-titles {
+  padding-top: 100px;
+  font-weight: 450;
+}
+
+.cvYear {
+  font-size: 14px;
+  padding-top: 30px;
+  font-weight: 450;
+}
+
+.cvDes {
+  font-size: 14px;
+}
+
+.aboutLink {
+  font-size: 14px;
+  color: #333;
+  text-decoration: underline;
 }
