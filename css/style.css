@@ -262,8 +262,8 @@ body.works .content {
   line-height: 0.5;
 }
 
-.first-work-description{
-    width: 60%;
+.first-work-description {
+  width: 60%;
   padding-top: 60px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -281,7 +281,6 @@ body.works .content {
   text-align: justify;
   line-height: 1.4; /* adjust spaces btw text lines */
 }
-
 
 .video-lapper {
   margin: 0 auto; /* center horizontally */
@@ -311,7 +310,6 @@ body.works .content {
   margin-top: 100px;
 }
 
-
 .citation {
   width: 60%;
   padding-top: 60px;
@@ -328,8 +326,13 @@ body.works .content {
   font-size: 14px;
 }
 
-.scafold-image{
-  width: 40%;   /* smaller than the normal ones */
+.scafold-image {
+  width: 40%; /* smaller than the normal ones */
   height: auto;
   display: block;
+}
+
+body.each-work .content {
+  min-height: auto;           /* let content decide height */
+  padding: 120px 20px 80px;   /* reduce bottom padding */
 }
