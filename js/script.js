@@ -32,3 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(img);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".free-image, .works-lapper img");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // trigger only once
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  fadeElements.forEach(el => {
+    observer.observe(el);
+  });
+});
