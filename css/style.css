@@ -333,6 +333,24 @@ body.works .content {
 }
 
 body.each-work .content {
-  min-height: auto;           /* let content decide height */
-  padding: 120px 20px 80px;   /* reduce bottom padding */
+  min-height: auto; /* let content decide height */
+  padding: 120px 20px 80px; /* reduce bottom padding */
+}
+
+.work-images-row {
+  width: 60%;           
+  display: flex;
+  justify-content: flex-start;  /* align to the left edge */
+  gap: 20px;
+  margin-top: 80px;
+  /* remove auto centering */
+  margin-left: 0;   
+  margin-right: 0;
+}
+
+
+.work-images-row img {
+  max-width: 48%;   /* two images fit nicely */
+  height: auto;
+  display: block;
 }
