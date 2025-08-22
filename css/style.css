@@ -123,19 +123,7 @@ body {
   min-height: auto;
 }
 
-footer {
-  background-color: #fffcee;
-  padding: 0 0;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  color: #aaa;
-}
 
-footer .nav-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 /* About page */
 .about-lapper {
@@ -471,6 +459,7 @@ body.each-work .content {
   }
   .nav-container {
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .logo-img {
@@ -526,4 +515,5 @@ body.each-work .content {
   .godList{
     width: 100%;
   }
+
 }
