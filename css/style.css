@@ -76,14 +76,10 @@ body {
 
 /* Base style for all images */
 .index-images {
-  width: 100%; 
+  width: 100%;
   height: auto;
   display: block;
   margin-bottom: 190px;
-}
-
-/* Fade-in for index page images */
-.index-images {
   opacity: 0;
   transform: translateY(0px);
   transition: opacity 0.6s ease-out, transform 0.8s ease-out;
@@ -117,12 +113,6 @@ body {
   margin-left: auto; /* stick to right edge of container */
   margin-right: 0;
 }
-
-.ohMy{
-  margin-bottom: 0px;
-}
-
-
 
 /* Main content */
 .content {
@@ -418,24 +408,30 @@ body.each-work .content {
 }
 
 @media (max-width: 1250px) {
-  .broom {
-    width: 900px;
+  .index-content {
+    width: 100%;
   }
-  .apple {
-    width: 600px;
-    top: 950px;
+  .index-images {
+    margin-bottom: 140px;
   }
-  .glass {
-    width: 500px;
-    top: 1650px;
+
+  .index-image-1 a,
+  .index-image-3 a {
+    margin-left: 20px;
   }
-  .ohMy {
-    width: 900px;
-    top: 2550px;
+
+  .index-image-2 a,
+  .index-image-4 a {
+    margin-right: 20px;
   }
-  .content {
-    min-height: 2900px;
+
+  .index-image-4 a {
+    margin-bottom: 0px;
   }
+
+  /* .content {
+    min-height: auto;
+  } */
   .works-lapper {
     width: 85%;
   }
@@ -469,50 +465,10 @@ body.each-work .content {
   }
 }
 
-@media (max-width: 950px) {
-  .index-content {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    min-height: auto;
-  }
-
-  .free-image {
-    position: static; /* stack normally */
-    display: block;
-    width: auto; /* don’t stretch to full */
-    max-width: 100%; /* leave ~10% gap on right */
-    margin: 30px 10px; /* top/bottom 20px, left 0, right auto */
-  }
-
-  .broom {
-    width: 70%;
-  }
-
-  .apple {
-    width: 50%;
-    margin-top: 80px;
-    display: block;
-    margin-left: auto; /* pushes the image to the right */
-    margin-right: 30px;
-  }
-
-  .glass {
-    width: 40%;
-    margin-top: 80px;
-  }
-
-  .ohMy {
-    width: 70%;
-    margin-top: 80px;
-    display: block;
-    margin-left: auto; /* pushes the image to the right */
-    margin-right: 30px; /* optional, to be explicit */
-    max-height: 1000px;
-  }
-}
-
 @media (max-width: 600px) {
+  .content{
+    padding-top: 10px;
+  }
   .nav-container {
     padding-top: 30px;
   }
@@ -525,47 +481,49 @@ body.each-work .content {
     font-size: 18px;
   }
 
-  /* center children inside the index area */
-  .index-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* <-- centers each child horizontally */
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  /* make the <a> wrappers block-level so centering works */
-  .index-content a {
-    display: block;
-    width: 100%;
-  }
-
-  /* the images themselves */
-  .free-image {
-    display: block;
-    width: 90%; /* or 100% for full-bleed */
-    margin: 20px auto; /* centered */
-    position: static;
-    height: auto;
-  }
-
-  /* ensure none of the per-image margins fight the centering */
-  .broom,
-  .apple,
-  .glass,
-  .ohMy {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .works-lapper {
     grid-template-columns: 1fr; /* switch to 1 column */
     gap: 30px; /* smaller vertical spacing */
     width: 100%; /* optional: make it a bit wider */
+    padding-top: 30px; 
   }
 
   .works-lapper img {
     width: 100%; /* make images full width */
     margin: 0 auto; /* center inside the column */
+  }
+
+  .index-content a {
+    width: 93%;
+    margin: 0 auto;
+  }
+  .about-lapper {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .about-content{
+    width: 93%;
+  }
+  .each-work-lapper {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .first-work-description, .work-description, .citation{
+    width: 100%;
+  }
+  .work-images-small{
+    width: 100%;
+  }
+  .work-images-row{
+    width: 100%;
+  }
+  .index-content{
+    margin-top: 150px;
+  }
+  .about-lapper{
+    padding-top: 130px;
+  }
+  .godList{
+    width: 100%;
   }
 }
