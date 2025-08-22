@@ -1,3 +1,5 @@
+/* Original css file */
+
 /* Base */
 body {
   margin: 0;
@@ -85,34 +87,29 @@ body {
   z-index: 1; /* keep images behind navbar */
 }
 
-/* When visible */
 .free-image.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Broom image (aligned LEFT) */
 .broom {
   width: 1150px;
   top: 200px;
   left: 20px;
 }
 
-/* Apple image (aligned RIGHT) */
 .apple {
   width: 780px;
   top: 1100px;
   right: 20px;
 }
 
-/* Glass image (aligned LEFT) */
 .glass {
   width: 600px; /* adjust size as you prefer */
   top: 1900px; /* adjust vertical position */
   left: 20px; /* same alignment logic as broom */
 }
 
-/* Apple image (now aligned RIGHT) */
 .ohMy {
   width: 980px;
   top: 3000px;
@@ -321,8 +318,12 @@ body.works .content {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .citation {
@@ -397,4 +398,54 @@ body.each-work .content {
   white-space: nowrap;
   line-height: 35px;
   color: #333;
+}
+
+@media (max-width: 1250px) {
+  .broom {
+    width: 900px;
+  }
+  .apple {
+    width: 600px;
+    top: 950px;
+  }
+  .glass {
+    width: 500px;
+    top: 1650px;
+  }
+  .ohMy {
+    width: 900px;
+    top: 2550px;
+  }
+  .content {
+    min-height: 2900px;
+  }
+  .each-work-lapper {
+    width: 70%;
+    padding-top: 20px;
+  }
+  .first-work-description {
+    width: 70%;
+    padding-top: 60px;
+  }
+  .work-description {
+    width: 70%;
+    margin-top: 80px;
+  }
+  .citation{
+    width: 70%;
+  }
+  .main-image,
+  .work-images-big {
+    margin-top: 80px;
+  }
+  .work-images-small {
+    width: 70%;
+    margin-top: 80px;
+  }
+  .scafold-image{
+    width: 50%;
+  }
+  .about-content{
+    width: 70%;
+  }
 }
