@@ -515,6 +515,10 @@ body.each-work .content {
   .godList {
     width: 100%;
   }
+  .about-lapper {
+    font-size: 14px;
+  }
+
   .about-name {
     font-size: 15px;
   }
