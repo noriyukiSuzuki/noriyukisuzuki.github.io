@@ -123,8 +123,6 @@ body {
   min-height: auto;
 }
 
-
-
 /* About page */
 .about-lapper {
   width: 80%;
@@ -454,7 +452,7 @@ body.each-work .content {
 }
 
 @media (max-width: 600px) {
-  .content{
+  .content {
     padding-top: 10px;
   }
   .nav-container {
@@ -474,7 +472,7 @@ body.each-work .content {
     grid-template-columns: 1fr; /* switch to 1 column */
     gap: 30px; /* smaller vertical spacing */
     width: 100%; /* optional: make it a bit wider */
-    padding-top: 30px; 
+    padding-top: 30px;
   }
 
   .works-lapper img {
@@ -490,30 +488,34 @@ body.each-work .content {
     width: 100%;
     padding-top: 10px;
   }
-  .about-content{
+  .about-content {
     width: 93%;
   }
   .each-work-lapper {
     width: 100%;
     padding-top: 0px;
   }
-  .first-work-description, .work-description, .citation{
+  .first-work-description,
+  .work-description,
+  .citation {
     width: 100%;
   }
-  .work-images-small{
+  .work-images-small {
     width: 100%;
   }
-  .work-images-row{
+  .work-images-row {
     width: 100%;
   }
-  .index-content{
+  .index-content {
     margin-top: 150px;
   }
-  .about-lapper{
+  .about-lapper {
     padding-top: 130px;
   }
-  .godList{
+  .godList {
     width: 100%;
   }
-
+  .about-name {
+    font-size: 15px;
+  }
 }
