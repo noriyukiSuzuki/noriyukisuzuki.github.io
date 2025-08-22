@@ -187,17 +187,16 @@ body {
   grid-template-columns: 1fr 1fr; /* 2 images per row */
   gap: 80px; /* space between images */
   /* max-width: 1200px; */
-  padding-top: 120px; 
+  padding-top: 120px;
 }
 
 .works-lapper a {
   display: block;
   width: 100%;
-  margin: 0 auto;        /* center inside the grid cell */
-  justify-self: center;  /* prevent grid stretch */
+  margin: 0 auto; /* center inside the grid cell */
+  justify-self: center; /* prevent grid stretch */
+  margin-bottom: 0px;
 }
-
-
 
 body.works .content {
   min-height: auto; /* let height be decided by content */
@@ -479,6 +478,10 @@ body.each-work .content {
   .works-lapper img {
     width: 100%; /* make images full width */
     margin: 0 auto; /* center inside the column */
+  }
+
+  .works-lapper a {
+    margin-bottom: 70px;
   }
 
   .index-content a {
