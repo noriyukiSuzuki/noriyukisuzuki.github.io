@@ -514,6 +514,7 @@ body.each-work .content {
   }
   .godList {
     width: 100%;
+    font-size: 14px;
   }
   .about-lapper {
     font-size: 14px;
@@ -521,5 +522,18 @@ body.each-work .content {
 
   .about-name {
     font-size: 15px;
+  }
+  .work-description,
+  .first-work-description {
+    font-size: 15px;
+  }
+  .citation {
+    font-size: 14px;
+  }
+  .citation p {
+    font-size: 13px;
+  }
+  .godList span {
+    font-size: 0.7rem;
   }
 }
