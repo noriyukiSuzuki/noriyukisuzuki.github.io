@@ -13,28 +13,9 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // avoid negative values
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".free-image");
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target); // fade in once
-        }
-      });
-    },
-    { threshold: 0.2 } // 20% visible before triggering
-  );
-
-  images.forEach(img => {
-    observer.observe(img);
-  });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
-  const fadeElements = document.querySelectorAll(".free-image, .works-lapper img");
+  const fadeElements = document.querySelectorAll(".free-image, .works-lapper img, .index-images");
 
   const observer = new IntersectionObserver(
     (entries, observer) => {

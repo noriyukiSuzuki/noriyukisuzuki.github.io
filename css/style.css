@@ -68,11 +68,61 @@ body {
 
 .index-content {
   max-width: 1400px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 170px auto;
+  margin-bottom: 0;
   position: relative;
-  padding: 120px 20px 20px 240px;
-  min-height: 3500px;
 }
+
+/* Base style for all images */
+.index-images {
+  width: 100%; 
+  height: auto;
+  display: block;
+  margin-bottom: 190px;
+}
+
+/* Fade-in for index page images */
+.index-images {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+}
+
+.index-images.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.index-image-1 a {
+  display: block;
+  width: 80%;
+}
+
+.index-image-2 a {
+  display: block;
+  width: 50%;
+  margin-left: auto; /* stick to right edge of container */
+  margin-right: 0;
+}
+
+.index-image-3 a {
+  display: block;
+  width: 40%;
+}
+
+.index-image-4 a {
+  display: block;
+  width: 80%;
+  margin-left: auto; /* stick to right edge of container */
+  margin-right: 0;
+}
+
+.ohMy{
+  margin-bottom: 0px;
+}
+
+
 
 /* Main content */
 .content {
@@ -80,48 +130,7 @@ body {
   margin: 0 auto;
   position: relative;
   padding: 120px 20px 240px;
-  min-height: 3500px;
-}
-
-.free-image {
-  position: absolute;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  /* fade-in animation */
-  opacity: 0;
-  /* transform: translateY(5px); */
-  transition: opacity 0.6s ease-out, transform 1s ease-out;
-  z-index: 1; /* keep images behind navbar */
-}
-
-.free-image.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.broom {
-  width: 1150px;
-  top: 200px;
-  left: 20px;
-}
-
-.apple {
-  width: 780px;
-  top: 1100px;
-  right: 20px;
-}
-
-.glass {
-  width: 600px; /* adjust size as you prefer */
-  top: 1900px; /* adjust vertical position */
-  left: 20px; /* same alignment logic as broom */
-}
-
-.ohMy {
-  width: 980px;
-  top: 3000px;
-  right: 20px;
+  min-height: auto;
 }
 
 footer {
@@ -206,11 +215,11 @@ footer .nav-container {
 }
 
 .works-lapper img {
-  width: 90%; /* make each image fit its column */
-  height: auto; /* keep aspect ratio */
+  width: 100%; /* fill the grid cell */
+  height: auto;
   display: block;
-  object-fit: cover; /* avoids stretching */
-  padding-bottom: 30px;
+  object-fit: cover;
+  margin: 0 auto; /* ensure centering if smaller than the cell */
 }
 
 body.works .content {
@@ -457,5 +466,106 @@ body.each-work .content {
   }
   .about-content {
     width: 70%;
+  }
+}
+
+@media (max-width: 950px) {
+  .index-content {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: auto;
+  }
+
+  .free-image {
+    position: static; /* stack normally */
+    display: block;
+    width: auto; /* don’t stretch to full */
+    max-width: 100%; /* leave ~10% gap on right */
+    margin: 30px 10px; /* top/bottom 20px, left 0, right auto */
+  }
+
+  .broom {
+    width: 70%;
+  }
+
+  .apple {
+    width: 50%;
+    margin-top: 80px;
+    display: block;
+    margin-left: auto; /* pushes the image to the right */
+    margin-right: 30px;
+  }
+
+  .glass {
+    width: 40%;
+    margin-top: 80px;
+  }
+
+  .ohMy {
+    width: 70%;
+    margin-top: 80px;
+    display: block;
+    margin-left: auto; /* pushes the image to the right */
+    margin-right: 30px; /* optional, to be explicit */
+    max-height: 1000px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    padding-top: 30px;
+  }
+
+  .logo-img {
+    height: 24px;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
+
+  /* center children inside the index area */
+  .index-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* <-- centers each child horizontally */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* make the <a> wrappers block-level so centering works */
+  .index-content a {
+    display: block;
+    width: 100%;
+  }
+
+  /* the images themselves */
+  .free-image {
+    display: block;
+    width: 90%; /* or 100% for full-bleed */
+    margin: 20px auto; /* centered */
+    position: static;
+    height: auto;
+  }
+
+  /* ensure none of the per-image margins fight the centering */
+  .broom,
+  .apple,
+  .glass,
+  .ohMy {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .works-lapper {
+    grid-template-columns: 1fr; /* switch to 1 column */
+    gap: 30px; /* smaller vertical spacing */
+    width: 100%; /* optional: make it a bit wider */
+  }
+
+  .works-lapper img {
+    width: 100%; /* make images full width */
+    margin: 0 auto; /* center inside the column */
   }
 }
