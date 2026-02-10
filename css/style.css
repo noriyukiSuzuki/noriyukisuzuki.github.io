@@ -79,7 +79,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 190px;
+  margin-bottom: 210px;
   opacity: 0;
   transform: translateY(0px);
   transition: opacity 0.6s ease-out, transform 0.8s ease-out;
@@ -97,14 +97,14 @@ body {
 
 .index-image-2 a {
   display: block;
-  width: 50%;
+  width: 60%;
   margin-left: auto; /* stick to right edge of container */
   margin-right: 0;
 }
 
 .index-image-3 a {
   display: block;
-  width: 40%;
+  width: 50%;
 }
 
 .index-image-4 a {
@@ -401,6 +401,7 @@ body.each-work .content {
     margin-bottom: 140px;
   }
 
+  /* index-image-1 & index-image-3 (index.html:30-38, 50-58) */
   .index-image-1 a,
   .index-image-3 a {
     margin-left: 20px;
