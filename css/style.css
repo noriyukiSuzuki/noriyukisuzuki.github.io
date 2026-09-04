@@ -21,8 +21,9 @@ body {
 
 .nav-container {
   max-width: 1400px;
+  width: 90%;
   margin: 0 auto;
-  padding: 45px 20px;
+  padding: 45px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,8 +70,7 @@ body {
 .index-content {
   max-width: 1400px;
   width: 90%;
-  margin: 240px auto;
-  margin-bottom: 0;
+  margin: 240px auto 0;
   position: relative;
 }
 
@@ -394,14 +394,20 @@ body.each-work .content {
 }
 
 @media (max-width: 1250px) {
+  .nav-container {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .index-content {
     width: 100%;
   }
+
   .index-images {
     margin-bottom: 140px;
   }
 
-  /* index-image-1 & index-image-3 (index.html:30-38, 50-58) */
   .index-image-1 a,
   .index-image-3 a {
     margin-left: 20px;
